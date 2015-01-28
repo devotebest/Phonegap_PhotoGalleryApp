@@ -1,0 +1,60 @@
+<!--
+///----------------------------------------------------------------------------------------------------
+///	Mobile App Built & Owned by: Vensatile Technologies 
+/// URL: http://www.vensatile.com
+/// - Custom js code, html-css markup created/developed are part of this mobile app.
+///	- Do not reuse or share any code from this app without permission from concern person or company.
+///----------------------------------------------------------------------------------------------------
+///	Disclaimer:
+/// - We does not claim ownership for html-css, js, mobile gui, or any framework used in this app.
+/// - Html, css, javascript, and app gui framework are property of the company who built and own it.
+///----------------------------------------------------------------------------------------------------
+-->
+<ion-view title="{{navTitle}} ({{photocount}})" >
+
+	<ion-nav-buttons side="left" >
+		<button class="button icon button-icon ion-navicon" ng-click="toggleLeftSideMenu();" ></button>
+	</ion-nav-buttons>
+	<ion-nav-buttons side="right" >
+        <a ng-href="#/sidemenu/photoupload" class="button icon button-icon ion-ios7-plus-empty" ng-show="photocount < 24 " ></a>
+		<button class="button icon button-icon ion-more" ng-click="toggleRightSideMenu();" ></button>
+	</ion-nav-buttons>
+
+    <span us-spinner="{ lines: 13, length: 16, width: 6, radius: 20, corners: 1, rotate: 0, direction: 1, color: '#000', speed: 1, trail: 60, shadow: false, hwaccel: false, className: 'vt-spinner' }" spinner-key="myspinner"   ></span>  
+
+    <ion-content class="has-header vt-page-bg" >
+
+        <ion-refresher pulling-text="pull to refresh" refreshing-text="refreshing..." pulling-icon="ion-arrow-down-c" on-refresh="doPageRefresh();" ></ion-refresher>
+		
+        <div align="center" ng-show=" photocount <= 0 " >
+        	<br /><br />
+        	<strong>Photo not added in your gallery yet.</strong>
+            <br /><br />
+            <a ng-href="#/sidemenu/photoupload" class="button icon button-icon ion-ios7-plus-empty" > <strong>Click to Upload Photo</strong></a>
+        </div>
+
+        <div align="center" ng-show=" photocount >= 24 " >        	
+            <strong>You can add maximum 24 photos.</strong>
+        	<br />
+        </div>
+
+        
+		<ion-list>
+			<div class="vt-photo-list-container" id="div-content-photo-list" >
+
+                <div class="vt-photo-wrapper" ng-repeat="photo in photos" >
+					<div class="vt-photo-cover" >
+                        <a href="javascript: void(0);" ng-click="photoDeleteClicked('{{photo.objectId}}');" class="icon ion-trash-a" id="vt-photo-delete" ></a>
+                        <img ng-src="{{photo.photoimage.url}}" ng-click="openPhotoLargeModalPage(photo);" alt="" border="0" />
+                    </div>
+				</div>
+                                
+                <div class="vt-clear-div" ></div>                
+			</div>
+		</ion-list>
+
+		<div class="vt-bottom-banner-space" ></div>
+
+    </ion-content>
+
+</ion-view>

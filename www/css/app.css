@@ -1,0 +1,250 @@
+/*
+///----------------------------------------------------------------------------------------------------
+///	Mobile App Built & Owned by: Vensatile Technologies 
+/// URL: http://www.vensatile.com
+/// - Custom js code, html-css markup created/developed are part of this mobile app.
+///	- Do not reuse or share any code from this app without permission from concern person or company.
+///----------------------------------------------------------------------------------------------------
+///	Disclaimer:
+/// - We does not claim ownership for html-css, js, mobile gui, or any framework used in this app.
+/// - Html, css, javascript, and app gui framework are property of the company who built and own it.
+///----------------------------------------------------------------------------------------------------
+*/
+/* Font Face */
+
+
+/* VT Clear & Spacer */
+.vt-blank-5 { clear:both; height:5px; line-height:5px; }
+.vt-blank-10 { clear:both; height:10px; line-height:10px; }
+.vt-blank-15 { clear:both; height:15px; line-height:15px; }
+.vt-blank-20 { clear:both; height:20px; line-height:20px; }
+.vt-blank-25 { clear:both; height:25px; line-height:25px; }
+.vt-blank-30 { clear:both; height:30px; line-height:30px; }
+.vt-blank-35 { clear:both; height:35px; line-height:35px; }
+.vt-blank-40 { clear:both; height:40px; line-height:40px; }
+.vt-blank-45 { clear:both; height:45px; line-height:45px; }
+.vt-blank-50 { clear:both; height:50px; line-height:50px; }
+.vt-blank-65 { clear:both; height:65px; line-height:65px; }
+.vt-blank-70 { clear:both; height:70px; line-height:70px; }
+.vt-blank-75 { clear:both; height:75px; line-height:75px; }
+.vt-blank-80 { clear:both; height:80px; line-height:80px; }
+.vt-blank-85 { clear:both; height:85px; line-height:85px; }
+.vt-blank-90 { clear:both; height:90px; line-height:90px; }
+.vt-blank-95 { clear:both; height:95px; line-height:95px; }
+.vt-blank-100 { clear:both; height:100px; line-height:100px; }
+.vt-bottom-banner-space { clear:both; height:94px; line-height:94px; }
+.vt-clear-div { clear:both; }
+
+/* Media Screen */
+@media (max-width: 480px) {
+	#vt-small-device {
+		display:block;
+	}
+	#vt-medium-device {
+		display:none;
+	}
+}
+@media (min-width: 481px) and (max-width: 2048px) {
+	#vt-small-device {
+		display:none;
+	}
+	#vt-medium-device {
+		display:block;
+	}
+}
+
+
+/* VT Page Bg */
+.vt-page-bg {
+
+}
+
+.vt-panel-bg {
+
+}
+
+.vt-spinner {
+	margin:0 20px 20px 0;
+	width:300px;
+	height:300px;
+
+	background-color:#333333;
+
+	color:#ffffff;
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+	border:1px solid;
+}
+
+
+/* Class FA Font Icon */
+.vt-icon {
+	display:inline-block;
+	speak:none;
+
+	font-family:FontAwesome;
+	font-style:normal;
+	font-weight:normal;
+	font-variant:normal;
+	text-transform:none;
+	text-rendering:auto;
+	
+	vertical-align:baseline;
+
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
+.vt-spin {
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+
+.vt-14px:before {
+  font-size:14px !important;
+}
+.vt-16px:before {
+  font-size:16px !important;
+}
+.vt-18px:before {
+  font-size:18px !important;
+}
+.vt-20px:before {
+  font-size:20px !important;
+}
+.vt-22px:before {
+  font-size:22px !important;
+}
+.vt-20px:before {
+  font-size:20px !important;
+}
+.vt-22px:before {
+  font-size:22px !important;
+}
+.vt-24px:before {
+  font-size:24px !important;
+}
+.vt-26px:before {
+  font-size:26px !important;
+}
+.vt-28px:before {
+  font-size:28px !important;
+}
+.vt-30px:before {
+  font-size:30px !important;
+}
+.vt-32px:before {
+  font-size:32px !important;
+}
+.vt-34px:before {
+  font-size:34px !important;
+}
+.vt-36px:before {
+  font-size:36px !important;
+}
+.vt-38px:before {
+  font-size:38px !important;
+}
+.vt-40px:before {
+  font-size:40px !important;
+}
+.vt-42px:before {
+  font-size:42px !important;
+}
+.vt-44px:before {
+  font-size:44px !important;
+}
+.vt-46px:before {
+  font-size:46px !important;
+}
+.vt-48px:before {
+  font-size:48px !important;
+}
+.vt-50px:before {
+  font-size:50px !important;
+}
+.vt-54px:before {
+  font-size:54px !important;
+}
+.vt-56px:before {
+  font-size:56px !important;
+}
+.vt-58px:before {
+  font-size:58px !important;
+}
+.vt-60px:before {
+  font-size:60px !important;
+}
+.vt-62px:before {
+  font-size:62px !important;
+}
+.vt-64px:before {
+  font-size:64px !important;
+}
+.vt-66px:before {
+  font-size:66px !important;
+}
+.vt-68px:before {
+  font-size:68px !important;
+}
+.vt-70px:before {
+  font-size:70px !important;
+}
+.vt-72px:before {
+  font-size:72px !important;
+}
+.vt-74px:before {
+  font-size:74px !important;
+}
+.vt-76px:before {
+  font-size:76px !important;
+}
+.vt-78px:before {
+  font-size:78px !important;
+}
+.vt-80px:before {
+  font-size:80px !important;
+}
+.vt-82px:before {
+  font-size:82px !important;
+}
+.vt-84px:before {
+  font-size:84px !important;
+}
+.vt-86px:before {
+  font-size:86px !important;
+}
+.vt-88px:before {
+  font-size:88px !important;
+}
+.vt-90px:before {
+  font-size:90px !important;
+}
+.vt-92px:before {
+  font-size:92px !important;
+}
+.vt-94px:before {
+  font-size:94px !important;
+}
+.vt-96px:before {
+  font-size:96px !important;
+}
+.vt-98px:before {
+  font-size:98px !important;
+}
+.vt-100px:before {
+  font-size:100px !important;
+}
+
+
+/* VT form error class */
+.vt-form-error{
+	color:red; 
+	font-size:14px;
+	font-weight:bold;   
+}

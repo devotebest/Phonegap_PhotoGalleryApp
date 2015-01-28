@@ -1,0 +1,141 @@
+/*
+=================================================================================================
+CUSTOME STYLE INDEX
+=================================================================================================
+1. VT FONT FACE SETUP
+2. VT PHOTO LIST STYLE
+
+=====================================================================================================
+*/
+
+/*
+=====================================================================================================
+1. VT FONT FACE SETUP
+=====================================================================================================
+*/
+
+@font-face {
+
+}
+
+
+/*
+=====================================================================================================
+2. VT PHOTO LIST STYLE
+=====================================================================================================
+*/
+
+/* VT Photo Gallery */
+.vt-photo-list-container {
+	margin:5px auto 0 auto;
+	padding:0 0 0 0;
+	width:100%;
+
+	border:0px solid;
+}
+
+.vt-photo-wrapper {	/* Columns decreased to 2 */
+	margin:0 1.40% 0.40% 1.40%;
+	padding:0 0 0 0;
+	position:relative;
+	float:left;
+	overflow:hidden;
+	width:47%;
+
+	background-color:#e4e4e4;
+
+	border:0px solid;
+}
+
+.vt-photo-list-container .vt-photo-wrapper .vt-photo-cover {
+	margin:0 0 0 0;
+	padding:56% 0 0 0;
+	position:relative;
+	overflow:hidden;
+	display:block;
+	width:100%;
+	height:0;
+
+	text-decoration:none;
+
+	border:0px solid;
+}	
+
+.vt-photo-list-container .vt-photo-wrapper .vt-photo-cover img {
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	position:absolute;
+	display:block;
+	width: 100%;
+	max-width:100%;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+}
+
+#vt-photo-delete {
+	margin:0 0 0 0;
+	padding:1px 5px 1px 5px;
+	position:absolute;
+	z-index:1010;
+	right:0px;
+	top:0px;
+
+	background-color:#e4e4e4;
+
+	font-size:24px;
+	color:#505050;
+
+	border-width:0px 0px 1px 1px;
+	border-style:solid;
+	border-color:#656565;
+}
+#vt-photo-delete:hover {
+	margin:0 0 0 0;
+	padding:0 5px 0 5px;
+	position:absolute;
+	z-index:1010;
+	right:0px;
+	top:0px;
+
+	background-color:#e4e4e4;
+
+	font-size:24px;
+	color:#505050;
+
+	border-width:0px 0px 1px 1px;
+	border-style:solid;
+	border-color:#656565;
+}
+
+
+/*
+-----------------------------------------------------------------------------------------------------
+VT Responsive
+-----------------------------------------------------------------------------------------------------
+*/
+
+@media screen and (min-width: 1150px) { /* Columns increased to 4 */
+	.vt-photo-list-container .vt-photo-wrapper {
+		margin:0 0.50% 1% 0.50%;
+		padding:0 0 0 0;
+		width:24%;
+	}
+}
+
+@media screen and (max-width: 935px) { /* Columns decreased to 3 */
+	.vt-photo-list-container .vt-photo-wrapper {
+		margin:0 0.80% 1.60% 0.80%;
+		padding:0 0 0 0;
+		width:31.70%;
+	}
+}
+
+@media screen and (max-width: 750px) { /* Columns decreased to 2 */
+	.vt-photo-list-container .vt-photo-wrapper {
+		margin:0 1.40% 2.80% 1.40%;
+		padding:0 0 0 0;
+		width:47%;
+	}
+}

@@ -1,0 +1,82 @@
+<!--
+///----------------------------------------------------------------------------------------------------
+///	Mobile App Built & Owned by: Vensatile Technologies 
+/// URL: http://www.vensatile.com
+/// - Custom js code, html-css markup created/developed are part of this mobile app.
+///	- Do not reuse or share any code from this app without permission from concern person or company.
+///----------------------------------------------------------------------------------------------------
+///	Disclaimer:
+/// - We does not claim ownership for html-css, js, mobile gui, or any framework used in this app.
+/// - Html, css, javascript, and app gui framework are property of the company who built and own it.
+///----------------------------------------------------------------------------------------------------
+-->
+<ion-view title="{{navTitle}}" >
+
+	<ion-nav-buttons side="left" ng-controller="RegisterBackButtonCtrl" >
+		<button class="button icon button-icon ion-ios7-arrow-left" ng-click="backToLogin();" ></button>
+	</ion-nav-buttons>
+	<ion-nav-buttons side="right" >
+	</ion-nav-buttons>
+
+    <span us-spinner="{ lines: 13, length: 16, width: 6, radius: 20, corners: 1, rotate: 0, direction: 1, color: '#000', speed: 1, trail: 60, shadow: false, hwaccel: false, className: 'vt-spinner' }" spinner-key="myspinner"   ></span>
+
+    <ion-content class="has-header vt-page-bg" >
+		<br />
+		<form class="padding-left padding-right" name="myForm" ng-submit="ConfirmFormSubmit()"  ng-controller="RegisterFormCtrl" >    
+				
+                <label class="item item-input" >
+                    <span class="input-label" >
+                        Email/Username
+                        <span class="vt-form-error" ng-show="myForm.myemailid.$error.required">*</span>
+                        <span class="vt-form-error" ng-show="myForm.myemailid.$error.email" >(invalid format)</span>                                                     
+                    </span>												
+                    <input type="email" placeholder="" name="myemailid" ng-model="m_myemailid" required />
+                </label>					          
+
+                <label class="item item-input" >            	
+                    <span class="input-label" >
+                        Password
+                        <span class="vt-form-error" ng-show="myForm.mypassword.$error.required">*</span>
+                        <span class="vt-form-error" ng-show="myForm.mypassword.$error.pattern">(no blank space)</span>
+                    </span>												
+                    <input type="password" placeholder="" name="mypassword" ng-model="m_mypassword" ng-pattern="p_mypassword" required />
+                </label>
+
+                <label class="item item-input" >            	
+                    <span class="input-label" >
+                        Confirm Password
+                        <span class="vt-form-error" ng-show="myForm.mypassword2.$error.required">*</span>
+                        <span class="vt-form-error" ng-show="myForm.mypassword2.$error.pattern">(no blank space)</span>
+                        <span class="vt-form-error" ng-show="isCofirmPasswordValid()" >invalid</span>
+                    </span>												
+                    <input type="password" placeholder="" name="mypassword2" ng-model="m_mypassword2" ng-pattern="p_mypassword2"  required />
+                </label>
+				<div class="vt-blank-10" ></div>
+
+				<label class="item item-input item-label" >
+					<span class="input-label" >First Name																																																																																																																																																
+                    	<span class="vt-form-error" ng-show="myForm.myfirstname.$error.required">*</span>
+                    	<span class="vt-form-error" ng-show="myForm.myfirstname.$error.pattern">( 1 word only )</span>
+                    </span>
+                    <input type="text" placeholder="" name="myfirstname" ng-model="m_myfirstname" ng-pattern="p_myfirstname" maxlength="30" required />
+				</label>
+
+				<label class="item item-input item-label" >
+					<span class="input-label" >Last Name
+						<span class="vt-form-error" ng-show="myForm.mylastname.$error.required">*</span>
+						<span class="vt-form-error" ng-show="myForm.mylastname.$error.pattern">( 1 word only )</span>
+                    </span>
+                    <input type="text" placeholder="" name="mylastname" ng-model="m_mylastname" ng-pattern="p_mylastname" maxlength="30" required />
+				</label>
+
+                <input type="submit" id="btn_submit" value=" Submit " class="button button-block" ng-show="myForm.$valid == true" />                                                               
+                <input type="button" id="btn_temp" value=" ( Please fillup valid form ) " class="button button-block button-assertive" ng-show="myForm.$valid == false" />                                                               
+ 
+				<!-- myForm.$valid = {{myForm.$valid}} -->
+		</form>
+		
+		<div class="vt-bottom-banner-space" ></div>
+
+    </ion-content>
+
+</ion-view>

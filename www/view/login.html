@@ -1,0 +1,75 @@
+<!--
+///----------------------------------------------------------------------------------------------------
+///	Mobile App Built & Owned by: Vensatile Technologies 
+/// URL: http://www.vensatile.com
+/// - Custom js code, html-css markup created/developed are part of this mobile app.
+///	- Do not reuse or share any code from this app without permission from concern person or company.
+///----------------------------------------------------------------------------------------------------
+///	Disclaimer:
+/// - We does not claim ownership for html-css, js, mobile gui, or any framework used in this app.
+/// - Html, css, javascript, and app gui framework are property of the company who built and own it.
+///----------------------------------------------------------------------------------------------------
+-->
+<ion-view title="{{navTitle}}" hide-nav-bar="true" >
+
+	<ion-nav-buttons side="left" >
+	</ion-nav-buttons>
+	<ion-nav-buttons side="right" >
+	</ion-nav-buttons>
+
+    <span us-spinner="{ lines: 13, length: 16, width: 6, radius: 20, corners: 1, rotate: 0, direction: 1, color: '#000', speed: 1, trail: 60, shadow: false, hwaccel: false, className: 'vt-spinner' }" spinner-key="myspinner"   ></span>
+
+	<ion-content class="vt-page-bg" >
+
+		<div class="padding" >
+
+            <div align="center" ><img src="img/login_top_theme.png" alt="" style="width:100%;" border="0" /></div>
+            <div class="vt-blank-10" ></div>
+
+            <span ng-bind-html="contentLogin" ></span>
+
+            <div class="vt-blank-20" ></div>
+
+            <form name="myForm" ng-submit="ConfirmFormSubmit()"  ng-controller="LoginFormCtrl" >
+
+                <label class="item item-input" >
+                    <span class="input-label" >
+                        Email
+                        <span class="vt-form-error" ng-show="myForm.myemail.$error.required">*</span>
+                        <span class="vt-form-error" ng-show="myForm.myemail.$error.email" >(invalid)</span>
+                    </span>
+                    <input type="email" placeholder="" name="myemail" ng-model="m_myemail" required />
+                </label>
+
+                <label class="item item-input" >
+                    <span class="input-label" >
+                        Password
+                        <span class="vt-form-error" ng-show="myForm.mypassword.$error.required">*</span>
+                        <span class="vt-form-error" ng-show="myForm.mypassword.$error.pattern">(invalid)</span>
+                    </span>
+                    <input type="password" placeholder="" name="mypassword" ng-model="m_mypassword" ng-pattern="p_mypassword" required />
+                </label>
+
+                <input type="submit" id="btn_submit" value=" Login " class="button button-block" />
+
+            </form>
+
+            <div align="center" >
+                <a class="button button-block button-stable" ng-href="#/sidemenu/forgotpassword" >
+                    Forgot password? Click Here.
+                </a>
+            </div>
+
+            <a class="button button-block button-stable" ng-href="#/sidemenu/register" >
+                <strong>New User? Register Here.</strong>
+            </a>
+
+            <!-- myForm.$valid = {{myForm.$valid}} -->
+
+		</div>
+
+		<div class="vt-bottom-banner-space" ></div>
+
+    </ion-content>
+
+</ion-view>

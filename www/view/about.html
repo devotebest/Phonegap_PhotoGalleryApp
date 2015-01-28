@@ -1,0 +1,54 @@
+<!--
+///----------------------------------------------------------------------------------------------------
+///	Mobile App Built & Owned by: Vensatile Technologies 
+/// URL: http://www.vensatile.com
+/// - Custom js code, html-css markup created/developed are part of this mobile app.
+///	- Do not reuse or share any code from this app without permission from concern person or company.
+///----------------------------------------------------------------------------------------------------
+///	Disclaimer:
+/// - We does not claim ownership for html-css, js, mobile gui, or any framework used in this app.
+/// - Html, css, javascript, and app gui framework are property of the company who built and own it.
+///----------------------------------------------------------------------------------------------------
+-->
+<ion-view title="{{navTitle}}" >
+
+	<ion-nav-buttons side="left" >
+		<button class="button icon button-icon ion-navicon" ng-click="toggleLeftSideMenu();" ></button>
+	</ion-nav-buttons>
+	<ion-nav-buttons side="right" >
+		<button class="button icon button-icon ion-more" ng-click="toggleRightSideMenu();" ></button>
+	</ion-nav-buttons>
+
+    <ion-content class="has-header vt-page-bg" >
+
+		<ion-list>
+			<div class="padding" >
+				
+                <strong>Cloud Photo Gallery is based on parse api.</strong><br />
+                <br />
+                <strong>Functionality:</strong><br />
+                - Register as free member.<br />
+                - Upload Photo after login.<br />
+                - Photo will be private to your user account.<br />
+                - You can delete photo any time.<br />
+                - App user can't see other member's photo.<br />                
+              	<br />
+                - All photos are stored on parse cloud.<br />
+                - No public access to photos other than this app.<br />  
+              	<br />
+                <strong>Note: </strong><br />
+                - This application is for parse demo purpose.<br />
+                - Do not upload photo for storge purpose.<br />
+                - We may delete photo from parse admin if storage full.<br />
+                - You can add maximum 24 photos, thereafter add photo button (+) disappear.
+                
+                
+                <div class="vt-clear-div" ></div>                
+			</div>
+		</ion-list>
+
+		<div class="vt-bottom-banner-space" ></div>
+
+    </ion-content>
+
+</ion-view>

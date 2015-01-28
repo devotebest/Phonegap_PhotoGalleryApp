@@ -1,0 +1,53 @@
+<!--
+///----------------------------------------------------------------------------------------------------
+///	Mobile App Built & Owned by: Vensatile Technologies 
+/// URL: http://www.vensatile.com
+/// - Custom js code, html-css markup created/developed are part of this mobile app.
+///	- Do not reuse or share any code from this app without permission from concern person or company.
+///----------------------------------------------------------------------------------------------------
+///	Disclaimer:
+/// - We does not claim ownership for html-css, js, mobile gui, or any framework used in this app.
+/// - Html, css, javascript, and app gui framework are property of the company who built and own it.
+///----------------------------------------------------------------------------------------------------
+-->
+<ion-view title="{{navTitle|truncate:22:true}}" >
+
+	<ion-nav-buttons side="left" >
+		<a ng-href="#/sidemenu/photogallery" class="button icon button-icon ion-ios7-arrow-left" ng-show=" isPhotoUploading == 'NO' "  ></a>
+	</ion-nav-buttons>
+	<ion-nav-buttons side="right" >
+	</ion-nav-buttons>
+    
+    <span us-spinner="{ lines: 13, length: 16, width: 6, radius: 20, corners: 1, rotate: 0, direction: 1, color: '#000', speed: 1, trail: 60, shadow: false, hwaccel: false, className: 'vt-spinner' }" spinner-key="myspinner"   ></span>  
+    
+	<ion-content class="has-header vt-page-bg" >
+                
+        <div class="list card" style="margin-top:10px; margin-bottom:0px;" >
+			
+            <div class="item item-text-wrap" align="center" >
+				
+                <img ng-src="{{previewPhotoSource}}" border="0" width="70%"  />                 				                                				
+	                          
+                <button class="button button-block button-stable"  ng-click="selectPhotoFromSource(0);" ng-show="showPhotoSelectButton == true " ><i class="icon ion-images" ></i> &nbsp; <strong>Choose from Gallery</strong></button>
+                <button class="button button-block button-stable"  ng-click="selectPhotoFromSource(1);" ng-show="showPhotoSelectButton == true " ><i class="icon ion-camera" ></i> &nbsp; <strong>Use Camera</strong></button>
+                            	
+                <button class="button button-block button-stable"  ng-click="uploadSelectedPhoto();" ng-show="showPhotoUploadButton == true" ><i class="icon vt-icon vt-upload vt-24px" ></i> &nbsp; <strong>Upload Selected Photo</strong></button>
+                <button class="button button-block button-stable"  ng-click="cancelSelectedPhoto();" ng-show="showPhotoCancelButton == true" ><strong>Cancel</strong></button>
+
+				<br />
+            	<div class="item item-stable" ng-show=" uploadStatusText != '' " >
+        			<strong>{{uploadStatusText}}</strong>
+    			</div>
+                                
+                <div class="vt-blank-10"  ></div>
+                
+                <!-- {{previewPhotoSource}} -->
+                
+            </div>
+		</div>
+
+		<div class="vt-bottom-banner-space" ></div>
+        
+	</ion-content>
+
+</ion-view>

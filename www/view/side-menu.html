@@ -1,0 +1,90 @@
+<!--
+///----------------------------------------------------------------------------------------------------
+///	Mobile App Built & Owned by: Vensatile Technologies 
+/// URL: http://www.vensatile.com
+/// - Custom js code, html-css markup created/developed are part of this mobile app.
+///	- Do not reuse or share any code from this app without permission from concern person or company.
+///----------------------------------------------------------------------------------------------------
+///	Disclaimer:
+/// - We does not claim ownership for html-css, js, mobile gui, or any framework used in this app.
+/// - Html, css, javascript, and app gui framework are property of the company who built and own it.
+///----------------------------------------------------------------------------------------------------
+-->
+	<ion-side-menus>
+
+		<ion-side-menu-content ng-controller="SideMenuContentCtrl" drag-content="main.allowSideMenuDrag" >
+			<ion-nav-bar class="bar-dark" ></ion-nav-bar>
+			<ion-nav-view name="sidemenuContent" ></ion-nav-view>
+		</ion-side-menu-content>
+
+		<ion-side-menu side="left" ng-controller="SideMenuLeftDataCtrl" class="vt-panel-bg" >
+
+            <header class="bar bar-header bar-stable" >
+				<h1 class="title" ></h1>
+				<button menu-close class="button button-icon icon ion-ios7-close-outline" ></button>
+			</header>
+
+            <ion-content class="has-header" >
+
+				<ion-list>
+					<a ng-href="#/sidemenu/contactlist" ng-click="closeSideMenuLeft();" class="item item-icon-left item-stable" >
+						<i class="icon ion-ios7-photos-outline" ></i>Photo Gallery
+					</a>
+
+					<a ng-href="#/sidemenu/about" ng-click="closeSideMenuLeft();" class="item item-icon-left item-stable" >
+						<i class="icon ion-ios7-information-outline" ></i>About App
+					</a>
+
+                    <div class="vt-blank-20" ></div>
+					<div class="vt-bottom-banner-space" ></div>
+				</ion-list>
+
+			</ion-content>
+
+		</ion-side-menu>
+
+
+		<ion-side-menu side="right" ng-controller="SideMenuRightDataCtrl" class="vt-panel-bg"   >
+
+            <header class="bar bar-header bar-stable" >
+				<button menu-close class="button button-icon icon ion-ios7-close-outline" ></button>
+				<h1 class="title" ></h1>
+			</header>
+
+            <ion-content class="has-header" >
+
+                <ion-list>
+
+                    <ion-item class="item item-avatar1 dark vt-bg-dark" >
+                        <!-- <img ng-src="img/user_screen_image.png" alt="" border="0" /> -->
+                        <h3 class="dark" >Welcome, {{user.firstname}} {{user.lastname}}</h3>
+                        <p><span class="positive" ng-show="user.username != '' " ><strong>Username:</strong> {{user.username}}</span></p>
+                        <!-- <p><span class="positive" ng-show="user.userobjectid != '' " ><strong>userobjectid:</strong> {{user.userobjectid}}</span></p>  -->                         
+                    </ion-item>
+
+					<a ng-href="#/sidemenu/updateprofile" ng-click="closeSideMenuRight();" class="item item-icon-left item-stable" >
+						<i class="icon ion-ios7-compose" ></i>Update Profile
+					</a>
+					<!--
+                    <a ng-href="#/sidemenu/changepassword" ng-click="closeSideMenuRight();" class="item item-icon-left item-stable" >
+						<i class="icon ion-ios7-compose-outline" ></i>Change Password
+					</a>
+                    -->
+					<a href="javascript: void(0);" ng-click="closeSideMenuRight();logoutClicked();" class="item item-icon-left item-stable" >
+						<i class="icon ion-log-out" ></i>Logout
+					</a>
+
+                    <div style="height:2px;" ></div>
+
+                    <div class="item item-divider item-stable" align="center" >{{apptitle}} ( {{appversion}} )</div>
+
+                    <div class="vt-blank-20" ></div>
+					<div class="vt-bottom-banner-space" ></div>
+
+    			</ion-list>
+			</ion-content>
+
+		</ion-side-menu>
+
+
+	</ion-side-menus>
